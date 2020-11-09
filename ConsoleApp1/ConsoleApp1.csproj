@@ -1,0 +1,36 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="bin\Debug\netcoreapp3.1\script\.vscode\**" />
+    <EmbeddedResource Remove="bin\Debug\netcoreapp3.1\script\.vscode\**" />
+    <None Remove="bin\Debug\netcoreapp3.1\script\.vscode\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="bin\Debug\netcoreapp3.1\script\add.csx" />
+    <None Include="bin\Debug\netcoreapp3.1\script\min.csx" />
+    <None Include="bin\Debug\netcoreapp3.1\script\omnisharp.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Dotnet.Script" Version="0.53.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="JWLibrary">
+      <HintPath>..\..\JWLibrary\DotnetStandard\JWLibrary\bin\Debug\netstandard2.1\JWLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="JWLibrary.Core">
+      <HintPath>..\..\JWLibrary\DotnetStandard\JWLibrary.Core\bin\Debug\netstandard2.1\JWLibrary.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="LiteDbFlex">
+      <HintPath>..\..\JWLibrary\DotnetStandard\JWLibrary\bin\Debug\netstandard2.1\LiteDbFlex.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>
